@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /* Backgrounds */
+  --color-bg: #0b0b14; /* page background */
+  --color-surface: #151521; /* card / container */
+
+  /* Text */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #9ca3af;
+
+  /* Borders */
+  --color-border: #2b2b35;
+
+  /* CTA (call-to-action) */
+  --color-cta: #6366f1; /* button base */
+  --color-cta-hover: #7c3aed; /* hover/active state */
+  --color-cta-focus: #8b5cf6;
+
+  /* Status colors */
+  --color-error: #ef4444;
+
+  /* Gradient for hero/side panel */
+  --gradient-hero: linear-gradient(
+    to bottom,
+    #6366f1,
+    /* top indigo */ #1e1e2e,
+    /* middle fade */ #000000 /* bottom */
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Serif", serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(
+    125deg,
+    hsla(240, 29%, 6%, 1) 85%,
+    hsla(238, 41%, 36%, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  max-width: 1000px;
+
+  /* border: 2px solid red; */
+  height: 85%;
+  flex: 1;
+  display: flex;
+}
+
+.hero-section {
+  width: 50%;
+  height: 100%;
+  background: var(--gradient-hero);
+  color: var(--color-text-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.hero-section-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.hero-section-title-section {
+  padding: 20px;
+}
+
+.hero-section-title {
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 1.5;
+  background: linear-gradient(to right, #fff, #333);
+  /* light → darker across each line */
+  background: linear-gradient(to right, #f5f6f8 0%, #d1d5db 45%, #9ca3af 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* make the glyphs show the gradient */
+}
+
+.form-section {
+  width: 50%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  padding: 20px;
+}
+
+.form-info {
+  padding: 20px;
+  text-align: center;
+}
+.options {
+  font-size: 10px;
+  margin-bottom: 20px;
+}
+.fa {
+  text-decoration: none;
+  color: var(--color-text-primary);
+  background-color: var(--color-cta);
+  padding: 10px 30px;
+  width: calc(50% - 20px);
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.fa-google {
+  margin-right: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  outline: none;
+  border: none;
+  padding: 8px;
+  border-radius: 10px;
+  color: var(--color-text-secondary);
+  background-color: #2a2a48;
+}
+
+.final-row {
+  width: 10%;
+  display: flex;
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  accent-color: green;
+  width: 10px;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.sign-up {
+  padding: 10px 20px;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: var(--color-cta);
+  color: var(--color-text-primary);
+}
+
+button {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover state */
+a:hover,
+button:hover {
+  background: #7a7ff7; /* slightly lighter */
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3); /* purple glow */
+}
+
+/* Active (pressed) state */
+a:active,
+button:active {
+  background: #4f46e5; /* slightly darker */
+  transform: scale(0.97); /* press down effect */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Focus (keyboard accessibility) */
+a:focus,
+button:focus {
+  outline: 2px solid #818cf8; /* glowing border */
+  outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  /* Styles here will only apply when the screen is 768px wide or less */
+  .wrapper {
+    flex-direction: column;
+
+    height: 100%;
+  }
+
+  .hero-section {
+    width: 100%;
+  }
+
+  .form-section {
+    width: 100%;
+  }
+}
