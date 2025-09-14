@@ -16,9 +16,6 @@ This project helped me practice working with:
 - HTML5  
 - CSS3  
 
-## Preview  
-![Preview Screenshot](screenshot.png)  
-
 ## Lessons Learned  
 - How to structure a form with semantic HTML  
 - Styling inputs, labels, and buttons with pseudo-classes  
@@ -26,3 +23,4 @@ This project helped me practice working with:
 
 ---
 This project is for **practice only** and is not connected to a real backend service.  
+
